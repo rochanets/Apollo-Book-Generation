@@ -3,8 +3,8 @@ from werkzeug.utils import secure_filename
 import json
 import pandas as pd
 from .analytics import analyze_dataframe
-from .models import DashboardItem, db
-from auth_service.models import User
+from extensions import db
+from .models import DashboardItem
 import io
 
 
