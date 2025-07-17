@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block sidebar %}
+<h3>Dashboards</h3>
+<ul>
+{% for item in items %}
+<li><a href="/dashboard/view/{{item.id}}">{{item.name}}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}
+{% block content %}
+<h2>{{name}}</h2>
+<div id="summary"></div>
+<script>
+var data = {{ summary|tojson }};
+var layout = {title: 'Resumo'};
+var graphs = [];
+
+// Example charts
+var openClose = [{
+    x: ['Abertos', 'Fechados', 'Backlog'],
+    y: [data.opened_this_month, data.closed_this_month, data.backlog],
+    type: 'bar'
+}];
+Plotly.newPlot('summary', openClose, {title: 'Resumo Mês Atual'});
+</script>
+{% endblock %}

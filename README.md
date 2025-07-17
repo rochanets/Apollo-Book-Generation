@@ -1,2 +1,11 @@
-# Apollo-Book-Generation
-Segmento do Apollo que gera books e relatórios diários para operações de AMS e ITO
+# Apollo Book Generation
+
+Aplicação web em Python com front-end HTML e microserviços em Flask. Permite cadastro e login de usuários, upload de arquivos CSV e geração de dashboards com gráficos e tabelas. Cada dashboard salvo aparece no painel lateral esquerdo para rápido acesso.
+
+## Execução local
+
+1. Instale as dependências com `pip install -r requirements.txt`.
+2. Inicie o aplicativo executando `python app.py`.
+3. Acesse `http://localhost:5000` no navegador.
+
+Os dados são armazenados em um banco SQLite (`app.db`) criado automaticamente.
