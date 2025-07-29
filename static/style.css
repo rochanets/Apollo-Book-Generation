@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #eee;
+}
+.top-menu {
+    background: #333;
+    padding: 10px;
+    color: #f60;
+}
+.top-menu a {
+    color: #f60;
+    margin-right: 10px;
+    text-decoration: none;
+}
+.container {
+    display: flex;
+    height: calc(100vh - 40px);
+}
+.sidebar {
+    width: 25%;
+    background: #222;
+    padding: 10px;
+    overflow-y: auto;
+}
+.main-content {
+    width: 75%;
+    padding: 10px;
+    overflow-y: auto;
+}
+button {
+    background: #f60;
+    border: none;
+    padding: 8px 12px;
+    color: #fff;
+    cursor: pointer;
+}
+input {
+    display: block;
+    margin-bottom: 10px;
+}

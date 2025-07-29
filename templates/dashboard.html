@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block sidebar %}
+<h3>Dashboards</h3>
+<ul>
+{% for item in items %}
+<li><a href="/dashboard/view/{{item.id}}">{{item.name}}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}
+{% block content %}
+<h2>Upload Arquivo</h2>
+<form action="/dashboard/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+    <button type="submit">Enviar</button>
+</form>
+{% endblock %}

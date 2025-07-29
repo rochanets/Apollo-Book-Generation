@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apollo Book Generation</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+<div class="top-menu">
+    <a href="/dashboard/">Dashboard</a>
+    <a href="/logout" style="float:right">Logout</a>
+</div>
+<div class="container">
+    <div class="sidebar">
+        {% block sidebar %}{% endblock %}
+    </div>
+    <div class="main-content">
+        {% block content %}{% endblock %}
+    </div>
+</div>
+</body>
+</html>
